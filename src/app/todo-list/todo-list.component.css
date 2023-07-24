@@ -1,0 +1,33 @@
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  > .todo-list {
+    > .todo-item {
+      width: 80vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      gap: 20px;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.35);
+      margin-bottom: 10px;
+
+      > .title {
+        text-align: center;
+        width: 300px;
+        word-wrap: break-word;
+      }
+
+      > .completed {
+        text-decoration-line: line-through;
+      }
+    }
+  }
+
+  border-radius: 10px;
+  > .zizzo {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.714);
+  }
+}

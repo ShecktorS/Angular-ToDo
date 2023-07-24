@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="todo-list">
+    <div class="todo-item" *ngFor="let todo of todos">
+      <p>{{ todo.id }}</p>
+      <p [ngClass]="{ completed: todo.completed }" class="title">
+        {{ todo.title }}
+      </p>
+      <input
+        type="checkbox"
+        (input)="changeStatus(todo)"
+        [checked]="todo.completed"
+      />
+      <button (click)="removeTodo(todo)">remove</button>
+    </div>
+  </div>
+  <form (submit)="addTodo()">
+    <input
+      [(ngModel)]="newTodo"
+      type="text"
+      name="new todo"
+      id="new todo"
+      required="true"
+    />
+    <input type="submit" value="Invia" />
+  </form>
+  <p>{{ newTodo }}</p>
+  <div class="zizzo">xcciaoi</div>
+</div>
